@@ -1,0 +1,75 @@
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.education__card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.education__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.education__top h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.education__range {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.education__note {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--accent-blue-deep);
+  font-weight: 500;
+}
+
+.education__details {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.education__honors {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.education__honors li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+.education__honors li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-mint-deep);
+  font-size: 12px;
+}
+
+@media (max-width: 780px) {
+  .education__grid {
+    grid-template-columns: 1fr;
+  }
+}
